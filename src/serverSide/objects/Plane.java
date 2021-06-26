@@ -225,7 +225,8 @@ public class Plane implements PlaneRem
 
     public synchronized void shutdown ()
     {
-        PlaneMain.shutdown = true;
+        System.out.println("Shutdown call");
+        PlaneMain.shutdown();
         notifyAll ();                                        // the barber may now terminate
     }
 }

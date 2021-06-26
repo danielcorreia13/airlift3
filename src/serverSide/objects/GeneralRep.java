@@ -248,13 +248,14 @@ public class GeneralRep implements GeneralRepRem
      *  Close the logging file
      */
     public synchronized void endReport(){
+		System.out.println("End report call");
     	log.println("\nAirlift sum up:");
 		for (int i = 0; i < nPassFlight.length; i++) {
 			if (nPassFlight[i] == 0) break;
 			log.println("Flight " + (i+1) + " transported " + nPassFlight[i] + " passengers");
 		}
         log.close();
-		GeneralRepMain.shutdown = true;
+		GeneralRepMain.shutdown();
 		notifyAll();
     }
 }

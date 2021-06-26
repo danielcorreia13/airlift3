@@ -343,6 +343,12 @@ public class DepartureAirport implements DepartureAirportRem
 
     public synchronized void shutdown ()
     {
+        System.out.println("Shutdown call");
+        try{
+            generalRep.endReport();
+        }catch (RemoteException e) {
+            System.out.println("Remote exception: "+ e.getMessage());
+        }
         DepartureAirportMain.shutdown();
         notifyAll ();
     }

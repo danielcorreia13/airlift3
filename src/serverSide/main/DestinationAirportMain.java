@@ -113,7 +113,8 @@ public class DestinationAirportMain
         shutdown = false;
 
         try
-        { while (!shutdown)
+        {
+            while (!shutdown)
             synchronized (Class.forName ("serverSide.main.DestinationAirportMain"))
             { try
             { (Class.forName ("serverSide.main.DestinationAirportMain")).wait ();

@@ -4,6 +4,7 @@ package serverSide.objects;
 import commInfra.RunParameters;
 import interfaces.DestinationAirportRem;
 import interfaces.GeneralRepRem;
+import serverSide.main.DepartureAirportMain;
 import serverSide.main.DestinationAirportMain;
 
 
@@ -101,9 +102,9 @@ public class DestinationAirport implements DestinationAirportRem
         {
             notifyAll();
         }
-        if (this.totalPassengers ==  RunParameters.nPassengers){
-            DestinationAirportMain.shutdown();
-        }
+//        if (this.totalPassengers ==  RunParameters.nPassengers){
+//            DestinationAirportMain.shutdown();
+//        }
 
     }
 
@@ -153,5 +154,18 @@ public class DestinationAirport implements DestinationAirportRem
         //System.out.println("\n\n    [!] Set destinanion flag at FALSE");
 
         notifyAll();
+    }
+
+    /**
+     *   Operation server shutdown.
+     *
+     *   New operation.
+     */
+
+    public synchronized void shutdown ()
+    {
+        System.out.println("Shutdown call");
+        DestinationAirportMain.shutdown();
+        notifyAll ();
     }
 }

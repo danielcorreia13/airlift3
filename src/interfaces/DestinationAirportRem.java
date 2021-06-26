@@ -38,4 +38,9 @@ public interface DestinationAirportRem extends Remote
      * @return number of total transported passengers
      */
     public int getTotalPassengers() throws RemoteException;
+
+    /**
+     * Shutdown the server
+     */
+    public void shutdown() throws RemoteException;
 }

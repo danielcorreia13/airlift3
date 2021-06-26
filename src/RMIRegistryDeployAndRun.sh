@@ -1,9 +1,11 @@
+sshpass -f password ssh sd401@192.168.8.178 'pkill -U sd401 rmiregistry'
+
 echo "Transfering data to the RMIregistry node."
 sshpass -f password ssh sd401@192.168.8.178 'mkdir -p test/AirLift'
 sshpass -f password ssh sd401@192.168.8.178 'rm -rf test/AirLift/*'
 sshpass -f password ssh sd401@192.168.8.178 'mkdir -p Public/classes/interfaces'
 sshpass -f password ssh sd401@192.168.8.178 'rm -rf Public/classes/interfaces/*'
-sshpass -f password scp dirRMIRegistry.zip sd401@l040101-ws08.ua.pt:test/AirLift
+sshpass -f password scp dirRMIRegistry.zip sd401@192.168.8.178:test/AirLift
 
 echo "Decompressing data sent to the RMIregistry node."
 sshpass -f password ssh sd401@192.168.8.178 'cd test/AirLift ; unzip -uq dirRMIRegistry.zip'

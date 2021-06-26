@@ -32,6 +32,8 @@ public class PassengerMain
     {
         Registry registry = null;
 
+        passenger = new Passenger[RunParameters.nPassengers];
+
         try {
             registry = LocateRegistry.getRegistry (args[0], Integer.parseInt(args[1]));
         }

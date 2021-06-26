@@ -1,3 +1,5 @@
+sshpass -f password ssh sd401@192.168.8.175 'pkill -U sd401 java'
+
 echo "Transfering data to the hostess node."
 
 sshpass -f password ssh sd401@192.168.8.175 'mkdir -p test/AirLift'

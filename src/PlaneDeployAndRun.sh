@@ -1,3 +1,5 @@
+sshpass -f password ssh sd401@192.168.8.172 'pkill -U sd401 java'
+
 echo "Transfering data to the plane node."
 sshpass -f password ssh sd401@192.168.8.172 'mkdir -p test/AirLift'
 sshpass -f password ssh sd401@192.168.8.172 'rm -rf test/AirLift/*'

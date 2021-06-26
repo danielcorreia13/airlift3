@@ -104,6 +104,7 @@ public class Hostess extends Thread
                 System.out.println("Remote exception: "+ e.getMessage());
             }
         }while (count < RunParameters.nPassengers);
+
     }
 
     /**

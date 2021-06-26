@@ -17,7 +17,7 @@ cp interfaces/Register.class dirRegistry/interfaces
 echo "  General Repository of Information"
 rm -rf dirGeneralRepos/serverSide dirGeneralRepos/clientSide dirGeneralRepos/interfaces
 mkdir -p dirGeneralRepos/serverSide dirGeneralRepos/serverSide/main dirGeneralRepos/serverSide/objects dirGeneralRepos/interfaces \
-         dirGeneralRepos/clientSide dirGeneralRepos/clientSide/entities
+         dirGeneralRepos/clientSide dirGeneralRepos/clientSide/entities dirGeneralRepos/commInfra
 cp serverSide/main/GeneralRepMain.class dirGeneralRepos/serverSide/main
 cp serverSide/objects/GeneralRep.class dirGeneralRepos/serverSide/objects
 cp interfaces/Register.class interfaces/GeneralRepRem.class dirGeneralRepos/interfaces
@@ -51,7 +51,7 @@ echo "  Destination Airport"
 rm -rf dirDestinationAirport/serverSide dirDestinationAirport/clientSide dirDestinationAirport/interfaces dirDestinationAirport/commInfra
 mkdir -p dirDestinationAirport/serverSide dirDestinationAirport/serverSide/main dirDestinationAirport/serverSide/objects dirDestinationAirport/interfaces \
          dirDestinationAirport/clientSide dirDestinationAirport/clientSide/entities dirDestinationAirport/commInfra
-cp serverSide/main/DestinationAirport.class dirDestinationAirport/serverSide/main
+cp serverSide/main/DestinationAirportMain.class dirDestinationAirport/serverSide/main
 cp serverSide/objects/DestinationAirport.class dirDestinationAirport/serverSide/objects
 cp interfaces/*.class dirDestinationAirport/interfaces
 #???? States (Check)
@@ -61,12 +61,12 @@ cp commInfra/*.class dirDestinationAirport/commInfra
 echo "  Hostess"
 rm -rf dirHostess/serverSide dirHostess/clientSide dirHostess/interfaces
 mkdir -p dirHostess/serverSide dirHostess/serverSide/main dirHostess/clientSide dirHostess/clientSide/main dirHostess/clientSide/entities \
-         dirHostess/interfaces
-cp dirHostess/serverSide/main
+         dirHostess/interfaces dirHostess/commInfra
+#cp dirHostess/serverSide/main
 cp clientSide/main/HostessMain.class dirHostess/clientSide/main
 #??? States (Check)
 #cp clientSide/entities/Hostess.class clientSide/entities/HostessStates.class dirHostess/clientSide/entities
-cp clientSide/entities/Hostess.class clientSide/entities/HostessStates.class dirHostess/clientSide/entities
+cp clientSide/entities/Hostess.class dirHostess/clientSide/entities
 cp commInfra/*.class dirHostess/commInfra
 
 
@@ -75,25 +75,23 @@ cp interfaces/DepartureAirportRem.class interfaces/DestinationAirportRem.class i
 echo "  Passengers"
 rm -rf dirPassenger/serverSide dirPassenger/clientSide dirPassenger/interfaces
 mkdir -p dirPassenger/serverSide dirPassenger/serverSide/main dirPassenger/clientSide dirPassenger/clientSide/main dirPassenger/clientSide/entities \
-         dirPassenger/interfaces
-cp dirPassenger/serverSide/main
+         dirPassenger/interfaces dirPassenger/commInfra
+#cp dirPassenger/serverSide/main
 cp clientSide/main/PassengerMain.class dirPassenger/clientSide/main
 #??? States (Check)
-#cp clientSide/entities/Passenger.class clientSide/entities/PassengerStates.class dirPassenger/clientSide/entities
+cp clientSide/entities/Passenger.class dirPassenger/clientSide/entities
 cp clientSide/entities/Passenger.class dirPassenger/clientSide/entities
 cp commInfra/*.class dirPassenger/commInfra
-
 
 cp interfaces/DepartureAirportRem.class interfaces/DestinationAirportRem.class interfaces/GeneralRepRem.class interfaces/PlaneRem.class dirPassenger/interfaces
 
 echo "  Pilot"
 rm -rf dirPilot/serverSide dirPilot/clientSide dirPilot/interfaces
 mkdir -p dirPilot/serverSide dirPilot/serverSide/main dirPilot/clientSide dirPilot/clientSide/main dirPilot/clientSide/entities \
-         dirPilot/interfaces
-cp dirPilot/serverSide/main
+         dirPilot/interfaces dirPilot/commInfra
+#cp dirPilot/serverSide/main
 cp clientSide/main/PilotMain.class dirPilot/clientSide/main
 #??? States (Check)
-#cp clientSide/entities/Pilot.class clientSide/entities/PilotStates.class dirPilot/clientSide/entities
 cp clientSide/entities/Pilot.class dirPilot/clientSide/entities
 cp commInfra/*.class dirPilot/commInfra
 cp interfaces/DepartureAirportRem.class interfaces/DestinationAirportRem.class interfaces/GeneralRepRem.class interfaces/PlaneRem.class dirPilot/interfaces

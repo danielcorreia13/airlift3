@@ -96,6 +96,7 @@ public class Pilot extends Thread
         try {
             depAirStub.parkAtTransferGate();
             depAirStub.shutdown();
+            destAirStub.shutdown();
             planeStub.shutdown();
         }catch(RemoteException e) {
             System.out.println("Remote exception: "+ e.getMessage());
