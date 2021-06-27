@@ -6,6 +6,8 @@ xterm  -T "Plane" -hold -e "./PlaneDeployAndRun.sh" &
 sleep 1
 xterm  -T "Destination Airport" -hold -e "./DestinationAirportDeployAndRun.sh" &
 sleep 1
-xterm  -T "Hostess" -hold -e "./HostessDeployAndRun.sh" &
 xterm  -T "Passenger" -hold -e "./PassengerDeployAndRun.sh" &
+sleep 1
 xterm  -T "Pilot" -hold -e "./PilotDeployAndRun.sh" &
+sleep 1
+xterm  -T "Hostess" -hold -e "./HostessDeployAndRun.sh" &
