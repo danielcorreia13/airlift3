@@ -16,6 +16,8 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.Date;
+
 /**
  *    Server side of the General Repository Main
  */
@@ -40,8 +42,8 @@ public class GeneralRepMain {
             System.setSecurityManager (new SecurityManager ());
         System.out.println("Security manager was installed!");
         
-
-        GeneralRep genRep = new GeneralRep("log.txt");
+        String logFileName = "../../../log_" + new Date().toString().replace(' ', '_') + ".txt";
+        GeneralRep genRep = new GeneralRep(logFileName);
         GeneralRepRem genRepInterface = null;
 
         try {

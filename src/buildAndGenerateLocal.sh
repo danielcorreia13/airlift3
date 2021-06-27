@@ -121,17 +121,17 @@ rm -f  dirPilot.zip
 zip -rq dirPilot.zip dirPilot
 
 echo "Deploying and decompressing execution environments."
-mkdir -p /home/daniel/test/AirLift
-rm -rf /home/daniel/test/AirLift/*
-cp dirRegistry.zip /home/daniel/test/AirLift
-cp dirGeneralRepos.zip /home/daniel/test/AirLift
-cp dirDepartureAirport.zip /home/daniel/test/AirLift
-cp dirPlane.zip /home/daniel/test/AirLift
-cp dirDestinationAirport.zip /home/daniel/test/AirLift
-cp dirHostess.zip /home/daniel/test/AirLift
-cp dirPassenger.zip /home/daniel/test/AirLift
-cp dirPilot.zip /home/daniel/test/AirLift
-cd /home/daniel/test/AirLift
+mkdir -p /home/$1/test/AirLift
+rm -rf /home/$1/test/AirLift/*
+cp dirRegistry.zip /home/$1/test/AirLift
+cp dirGeneralRepos.zip /home/$1/test/AirLift
+cp dirDepartureAirport.zip /home/$1/test/AirLift
+cp dirPlane.zip /home/$1/test/AirLift
+cp dirDestinationAirport.zip /home/$1/test/AirLift
+cp dirHostess.zip /home/$1/test/AirLift
+cp dirPassenger.zip /home/$1/test/AirLift
+cp dirPilot.zip /home/$1/test/AirLift
+cd /home/$1/test/AirLift
 unzip -q dirRegistry.zip
 #mv set_rmiregistry_alt.sh /home/$1
 unzip -q dirGeneralRepos.zip

@@ -1,11 +1,11 @@
 xterm  -T "General Repository" -hold -e "./GeneralReposDeployAndRun.sh" &
-sleep 2
+sleep 8
 xterm  -T "Departure Airport" -hold -e "./DepartureAirportDeployAndRun.sh" &
-sleep 1
+sleep 4
 xterm  -T "Plane" -hold -e "./PlaneDeployAndRun.sh" &
-sleep 1
+sleep 4
 xterm  -T "Destination Airport" -hold -e "./DestinationAirportDeployAndRun.sh" &
-sleep 1
+sleep 4
 xterm  -T "Passenger" -hold -e "./PassengerDeployAndRun.sh" &
 sleep 1
 xterm  -T "Pilot" -hold -e "./PilotDeployAndRun.sh" &
